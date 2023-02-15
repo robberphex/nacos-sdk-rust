@@ -143,7 +143,7 @@ pub trait NamingEventListener: Send + Sync + 'static {
 ///   .build()?;
 /// ```
 #[doc(alias("naming", "sdk", "api"))]
-pub trait NamingService {
+pub trait NamingService: Sync + Send {
     fn register_service(
         &self,
         service_name: String,
